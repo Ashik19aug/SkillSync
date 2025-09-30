@@ -50,17 +50,17 @@ export function Navbar() {
                         <button
                             className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
                             <House className="h-4 w-4 mr-2"/>
-                            One
+                            Dashboard
                         </button>
                         <button
                             className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
                             <House className="h-4 w-4 mr-2"/>
-                            Two
+                            Jobs
                         </button>
                         <button
                             className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
                             <House className="h-4 w-4 mr-2"/>
-                            Three
+                            Practice Skills
                         </button>
                     </div>
 
@@ -101,11 +101,13 @@ export function Navbar() {
                                             Edit Profile
                                         </button>
                                         <div className="border-t my-1"></div>
-                                        <button
-                                            className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-red-500 rounded-md">
-                                            <LogOut className="h-4 w-4 mr-2"/>
-                                            Logout
-                                        </button>
+                                        <Link href="/" className="block">
+                                            <button
+                                                className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-red-500 rounded-md">
+                                                <LogOut className="h-4 w-4 mr-2"/>
+                                                Logout
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             )}
@@ -129,17 +131,17 @@ export function Navbar() {
                             <button
                                 className="flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-blue-500 hover:text-accent-foreground h-10 px-4 py-2">
                                 <House className="h-4 w-4 mr-2"/>
-                                Home
+                                Dashboard
                             </button>
                             <button
                                 className="flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
                                 <House className="h-4 w-4 mr-2"/>
-                                Home 2
+                                Jobs
                             </button>
                             <button
                                 className="flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
                                 <House className="h-4 w-4 mr-2"/>
-                                Home 3
+                                Practice Skills
                             </button>
 
                             <div className="border-t my-2"></div>
@@ -154,11 +156,13 @@ export function Navbar() {
                                 <Settings className="h-4 w-4 mr-2"/>
                                 Edit Profile
                             </button>
-                            <button
-                                className="flex items-center justify-center rounded-md text-sm text-white hover:bg-gray-100 h-10 px-4 py-2">
-                                <LogOut className="h-4 w-4 mr-2"/>
-                                Logout
-                            </button>
+                            <Link href="/" className="block">
+                                <button
+                                    className="flex items-center justify-center rounded-md text-sm text-white hover:bg-gray-100 h-10 px-4 py-2">
+                                    <LogOut className="h-4 w-4 mr-2"/>
+                                    Logout
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 )}
