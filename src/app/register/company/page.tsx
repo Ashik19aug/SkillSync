@@ -50,7 +50,7 @@ export default function CompanyRegisterPage() {
 
         // Simulate API call
         setTimeout(() => {
-            router.push("/dashboard/company")
+            router.push("/dashboard")
         }, 1500)
     }
 
@@ -59,6 +59,8 @@ export default function CompanyRegisterPage() {
             <div className="w-full max-w-2xl space-y-6">
 
                 <div className="glass-card rounded-xl p-6">
+
+
                     <div className="flex items-center justify-between">
                         <div className="space-y-1 mb-6">
                             <div className="flex items-center gap-2">

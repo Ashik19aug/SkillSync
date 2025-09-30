@@ -4,10 +4,11 @@ import type React from "react"
 import {useState} from "react"
 import Link from "next/link"
 import { ArrowLeft} from "lucide-react"
+import {useRouter} from "next/navigation";
 
 export default function LoginPage() {
     const [isLoading, setIsLoading] = useState(false)
-
+    const router = useRouter();
     // const handleSubmit = async (e: React.FormEvent) => {
     //     e.preventDefault()
     //     setError("")
@@ -28,6 +29,11 @@ export default function LoginPage() {
     //         }
     //     }, 1000)
     // }
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault(); // prevent page reload
+        console.log("Form submitted");
+        router.push("/dashboard"); // redirect
+    };
 
     return (
         <div
@@ -47,7 +53,7 @@ export default function LoginPage() {
                         your account</p>
                 </div>
 
-                <form onSubmit={() => console.log('Form submitted')}>
+                <form onSubmit={handleSubmit}>
                     <div className="space-y-4">
                         <div className="mb-5">
                             <label htmlFor="email" className="block mb-2 text-sm text-white font-light">
