@@ -7,7 +7,7 @@ import {
     Mail,
     MapPin,
     Phone,
-    Plus,
+    Plus, SquarePen,
     TrendingUp,
     UserCheck,
     Users
@@ -62,11 +62,18 @@ export default function ProfilePage() {
                             </div>
                         </div>
                     </div>
-                    <Link href="/profile/edit">
-                        <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-2 rounded-md">
-                            <Plus className="h-4 w-4 mr-2"/>Post new job
-                        </button>
-                    </Link>
+                    <div className="flex items-center gap-6">
+                        <Link href="/profile/edit">
+                            <button className="flex items-center bg-green-600 hover:bg-green-700 text-white py-2 px-2 rounded-md">
+                                <SquarePen className="h-4 w-4 mr-2" />Edit Profile
+                            </button>
+                        </Link>
+                        <Link href="/profile/edit">
+                            <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-2 rounded-md">
+                                <Plus className="h-4 w-4 mr-2"/>Post new job
+                            </button>
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="flex gap-4 mb-6">
@@ -163,8 +170,7 @@ export default function ProfilePage() {
                 </div>
             </div>
 
-
-            <div className="glass-card p-6 rounded-xl border border-white/10">
+            <div className="glass-card p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
                 <div className="flex items-center justify-between mb-6">
                     <div>
                         <h3 className="text-xl font-bold text-white mb-1">Recent Job Posts</h3>
@@ -181,32 +187,32 @@ export default function ProfilePage() {
 
                 <div className="space-y-4">
                     {recentJobs.map((job) => (
-                        <Link key={job.id} href={`/jobs/${job.id}`}>
-                            <div className="p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all cursor-pointer">
+                        <Link key={job.id} href={`/jobs/${job.id}`} className="my-2">
+                            <div
+                                className="p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all cursor-pointer my-2">
                                 <div className="flex items-center justify-between">
                                     <div className="flex-1">
                                         <h4 className="font-semibold text-white mb-2">{job.title}</h4>
                                         <div className="flex items-center gap-4 text-sm text-white/60">
-                        <span className="flex items-center gap-1">
-                          <Users className="h-4 w-4" />
-                            {job.applications} applications
-                        </span>
                                             <span className="flex items-center gap-1">
-                          <Eye className="h-4 w-4" />
+                                              <Users className="h-4 w-4"/>
+                                                {job.applications} applications
+                                            </span>
+                                            <span className="flex items-center gap-1">
+                                                <Eye className="h-4 w-4"/>
                                                 {job.views} views
-                        </span>
+                                            </span>
                                         </div>
                                     </div>
                                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
-                      {job.status}
-                    </span>
+                                      {job.status}
+                                    </span>
                                 </div>
                             </div>
                         </Link>
                     ))}
                 </div>
             </div>
-
 
         </div>
     )

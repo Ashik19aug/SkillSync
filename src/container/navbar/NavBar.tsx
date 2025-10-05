@@ -47,11 +47,13 @@ export function Navbar() {
 
                     {/* Desktop Center Button */}
                     <div className="hidden md:flex items-center gap-x-2">
-                        <button
-                            className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
-                            <House className="h-4 w-4 mr-2"/>
-                            Dashboard
-                        </button>
+                        <Link href="/dashboard" className="block">
+                            <button
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
+                                <House className="h-4 w-4 mr-2"/>
+                                Dashboard
+                            </button>
+                        </Link>
                         <button
                             className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
                             <House className="h-4 w-4 mr-2"/>
@@ -128,11 +130,13 @@ export function Navbar() {
                 {isMobileMenuOpen && (
                     <div ref={mobileMenuRef} className="md:hidden mt-4 pb-4 border-t pt-4">
                         <div className="flex flex-col space-y-3">
-                            <button
-                                className="flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-blue-500 hover:text-accent-foreground h-10 px-4 py-2">
-                                <House className="h-4 w-4 mr-2"/>
-                                Dashboard
-                            </button>
+                            <Link href="/dashboard" className="block">
+                                <button
+                                    className="flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-blue-500 hover:text-accent-foreground h-10 px-4 py-2">
+                                    <House className="h-4 w-4 mr-2"/>
+                                    Dashboard
+                                </button>
+                            </Link>
                             <button
                                 className="flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
                                 <House className="h-4 w-4 mr-2"/>
