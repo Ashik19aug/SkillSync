@@ -97,11 +97,13 @@ export function Navbar() {
                                                 Company Profile
                                             </button>
                                         </Link>
-                                        <button
-                                            className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-blue-500 rounded-md">
-                                            <Settings className="h-4 w-4 mr-2"/>
-                                            Edit Profile
-                                        </button>
+                                        {/*<Link href="/profile/developer/edit" className="block">*/}
+                                        {/*    <button*/}
+                                        {/*        className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-blue-500 rounded-md">*/}
+                                        {/*        <Settings className="h-4 w-4 mr-2"/>*/}
+                                        {/*        Edit Profile*/}
+                                        {/*    </button>*/}
+                                        {/*</Link>*/}
                                         <div className="border-t my-1"></div>
                                         <Link href="/" className="block">
                                             <button

@@ -115,7 +115,7 @@ export default function ProfilePage() {
                             </div>
                         </div>
                     </div>
-                    <Link href="/profile/edit">
+                    <Link href="/profile/developer/edit">
                         <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-2 rounded-md">
                             <Edit className="h-4 w-4 mr-2"/>Edit Profile
                         </button>

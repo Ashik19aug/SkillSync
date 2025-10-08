@@ -63,7 +63,7 @@ export default function ProfilePage() {
                         </div>
                     </div>
                     <div className="flex items-center gap-6">
-                        <Link href="/profile/edit">
+                        <Link href="/profile/company/edit">
                             <button className="flex items-center bg-green-600 hover:bg-green-700 text-white py-2 px-2 rounded-md">
                                 <SquarePen className="h-4 w-4 mr-2" />Edit Profile
                             </button>
