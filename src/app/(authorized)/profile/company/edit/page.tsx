@@ -22,59 +22,11 @@ export default function EditProfilePage() {
         bio: "Passionate full-stack developer with 8+ years of experience building scalable web applications. Specialized in React, Node.js, and cloud technologies. Love solving complex problems and mentoring junior developers.",
     })
 
-    const [skills, setSkills] = useState([
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Next.js",
-        "PostgreSQL",
-        "AWS",
-        "Docker",
-        "GraphQL",
-        "Tailwind CSS",
-        "Python",
-    ])
-    const [newSkill, setNewSkill] = useState("")
-
-    const [experience, setExperience] = useState([
-        {
-            title: "Senior Full Stack Developer",
-            company: "TechCorp",
-            location: "San Francisco, CA",
-            period: "2021 - Present",
-            description:
-                "Leading development of core platform features, mentoring junior developers, and architecting scalable solutions.",
-        },
-        {
-            title: "Full Stack Developer",
-            company: "StartupXYZ",
-            location: "Remote",
-            period: "2019 - 2021",
-            description: "Built and maintained multiple client-facing applications using React and Node.js.",
-        },
-    ])
-
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
         })
-    }
-
-    const addSkill = () => {
-        if (newSkill.trim() && !skills.includes(newSkill.trim())) {
-            setSkills([...skills, newSkill.trim()])
-            setNewSkill("")
-        }
-    }
-
-    const removeSkill = (skillToRemove: string) => {
-        setSkills(skills.filter((skill) => skill !== skillToRemove))
-    }
-
-    const handleSave = () => {
-        console.log("[v0] Saving profile:", {formData, skills, experience})
-        router.push("/profile")
     }
 
     return (
