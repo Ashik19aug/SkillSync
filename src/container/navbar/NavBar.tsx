@@ -51,7 +51,7 @@ export function Navbar() {
                             <button
                                 className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
                                 <House className="h-4 w-4 mr-2"/>
-                                Dashboard
+                                Home
                             </button>
                         </Link>
                         <Link href="/jobs" className="block">
@@ -72,12 +72,10 @@ export function Navbar() {
                     <div className="hidden md:flex items-center">
                         <div className="relative" ref={userDropdownRef}>
                             <button
-                                className="inline-flex items-center justify-center rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+                                className="inline-flex items-center justify-center rounded-md border border-input bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer"
                                 onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
                             >
-                                <User className="h-4 w-4 mr-2"/>
-                                User Name
-                                <ChevronDown className="h-4 w-4 ml-2"/>
+                                <User className="h-4 w-4 mr-2"/> User <ChevronDown className="h-4 w-4 ml-2"/>
                             </button>
 
                             {/* Dropdown Menu */}
