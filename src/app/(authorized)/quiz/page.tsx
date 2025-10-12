@@ -90,7 +90,7 @@ export default function QuizSelectionPage() {
                 </div>
 
                 {/* Start Quiz Button */}
-                <div className="flex justify-center">
+                <div className="flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-md py-2 mt-1">
                     <Link
                         href={
                             selectedTech && selectedDifficulty
