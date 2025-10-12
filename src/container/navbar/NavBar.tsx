@@ -12,8 +12,12 @@ import {
 } from "lucide-react";
 import {useEffect, useRef, useState} from "react";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
+import clsx from "clsx"
 
 export function Navbar() {
+    const pathname = usePathname()
+
     const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -45,6 +49,12 @@ export function Navbar() {
         };
     }, [isUserDropdownOpen, isMobileMenuOpen]);
 
+    const navItems = [
+        { href: "/dashboard", label: "Home", icon: House },
+        { href: "/jobs", label: "Jobs", icon: BriefcaseBusiness },
+        { href: "/quiz", label: "Practice Skills", icon: Brain },
+    ]
+
     return (
         <nav className="border-b-1 backdrop-blur-sm sticky top-0 z-50">
             <div className="container mx-auto px-4 py-2">
@@ -58,27 +68,24 @@ export function Navbar() {
 
                     {/* Desktop Center Button */}
                     <div className="hidden md:flex items-center gap-x-2">
-                        <Link href="/dashboard" className="block">
-                            <button
-                                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
-                                <House className="h-4 w-4 mr-2"/>
-                                Home
-                            </button>
-                        </Link>
-                        <Link href="/jobs" className="block">
-                            <button
-                                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
-                                <BriefcaseBusiness className="h-4 w-4 mr-2" />
-                                Jobs
-                            </button>
-                        </Link>
-                        <Link href="/quiz" className="block">
-                            <button
-                                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
-                                <Brain className="h-4 w-4 mr-2" />
-                                Practice Skills
-                            </button>
-                        </Link>
+                        {navItems.map(({ href, label, icon: Icon }) => {
+                            const isActive = pathname === href
+                            return (
+                                <Link href={href} key={href} className="block">
+                                    <button
+                                        className={clsx(
+                                            "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 cursor-pointer",
+                                            isActive
+                                                ? "bg-blue-600 text-white" // ✅ active state background
+                                                : "hover:bg-accent hover:text-accent-foreground"
+                                        )}
+                                    >
+                                        <Icon className="h-4 w-4 mr-2" />
+                                        {label}
+                                    </button>
+                                </Link>
+                            )
+                        })}
                     </div>
 
                     {/* Desktop User Dropdown */}
