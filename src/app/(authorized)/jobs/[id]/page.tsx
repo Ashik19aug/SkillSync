@@ -32,7 +32,7 @@ type Comment = {
     content: string
     timestamp: string
     likes: number
-    replies: [CommentReply]
+    replies: CommentReply[]
 }
 
 export default function JobDetailsPage({params}: { params: { id: string } }) {
