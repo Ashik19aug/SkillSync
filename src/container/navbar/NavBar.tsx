@@ -1,4 +1,4 @@
-import {House, ChevronDown, User, Settings, LogOut, Menu, X} from "lucide-react";
+import {House, ChevronDown, User, Settings, LogOut, Menu, X, BookOpenCheck, BriefcaseBusiness} from "lucide-react";
 import {useEffect, useRef, useState} from "react";
 import Link from "next/link";
 
@@ -57,15 +57,17 @@ export function Navbar() {
                         <Link href="/jobs" className="block">
                             <button
                                 className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
-                                <House className="h-4 w-4 mr-2"/>
+                                <BriefcaseBusiness className="h-4 w-4 mr-2" />
                                 Jobs
                             </button>
                         </Link>
-                        <button
-                            className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
-                            <House className="h-4 w-4 mr-2"/>
-                            Practice Skills
-                        </button>
+                        <Link href="/quiz" className="block">
+                            <button
+                                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 cursor-pointer">
+                                <BookOpenCheck className="h-4 w-4 mr-2"/>
+                                Practice Skills
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Desktop User Dropdown */}
