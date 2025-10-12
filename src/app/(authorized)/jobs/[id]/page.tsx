@@ -213,8 +213,7 @@ export default function JobDetailsPage({params}: { params: { id: string } }) {
                                 <p className="text-white/60 text-sm mb-4">We review your application and get back
                                     to you soon.</p>
                                 <Link href="/jobs">
-                                    <button
-                                        className="w-full border-white/20 text-white hover:bg-white/10 bg-transparent">
+                                    <button className="w-full border-white/20 text-white hover:bg-white/10 bg-transparent">
                                         Browse More Jobs
                                     </button>
                                 </Link>
@@ -222,11 +221,11 @@ export default function JobDetailsPage({params}: { params: { id: string } }) {
                         ) : (
                             <>
                                 <button onClick={() => setShowApplicationForm(true)}
-                                        className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm py-2 cursor-pointer mb-4">
+                                        className="btn-primary">
                                     Apply Now
                                 </button>
                                 <button onClick={() => setIsSaved(!isSaved)}
-                                        className="flex items-center justify-center w-full border-white/20 text-white bg-white/5 hover:bg-white/10 rounded-md py-2">
+                                        className="flex items-center justify-center w-full border-white/20 text-white bg-white/5 hover:bg-white/10 rounded-md py-2 cursor-pointer">
                                     <Star
                                         className={`h-4 w-4 mr-2 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`}/>
                                     {isSaved ? "Saved" : "Save Job"}
