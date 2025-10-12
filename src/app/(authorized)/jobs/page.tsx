@@ -222,7 +222,7 @@ export default function JobsPage() {
                             </div>
 
                             <Link href={`/jobs/${job.id}`}>
-                                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm py-1">View Details
+                                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm py-2 cursor-pointer">View Details
                                 </button>
                             </Link>
                         </div>
