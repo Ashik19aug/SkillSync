@@ -101,31 +101,17 @@ export function Navbar() {
                             {/* Dropdown Menu */}
                             {isUserDropdownOpen && (
                                 <div
-                                    className="absolute right-0 mt-4 w-48 rounded-md border bg-white/5 backdrop-blur-sm shadow-lg z-50">
+                                    className="absolute right-0 mt-4 w-48 rounded-md border bg-white/15 backdrop-blur-sm shadow-lg z-50">
                                     <div className="py-1">
-                                        <Link href="/profile/developer" className="block">
+                                        <Link href="/profile/developer" className="block cursor-pointer">
                                             <button
                                                 className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-blue-500 rounded-md">
                                                 <User className="h-4 w-4 mr-2"/>
                                                 View Profile
                                             </button>
                                         </Link>
-                                        <Link href="/profile/company" className="block">
-                                            <button
-                                                className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-blue-500 rounded-md">
-                                                <User className="h-4 w-4 mr-2"/>
-                                                Company Profile
-                                            </button>
-                                        </Link>
-                                        {/*<Link href="/profile/developer/edit" className="block">*/}
-                                        {/*    <button*/}
-                                        {/*        className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-blue-500 rounded-md">*/}
-                                        {/*        <Settings className="h-4 w-4 mr-2"/>*/}
-                                        {/*        Edit Profile*/}
-                                        {/*    </button>*/}
-                                        {/*</Link>*/}
                                         <div className="border-t my-1"></div>
-                                        <Link href="/" className="block">
+                                        <Link href="/" className="block cursor-pointer">
                                             <button
                                                 className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-red-500 rounded-md">
                                                 <LogOut className="h-4 w-4 mr-2"/>
